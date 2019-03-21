@@ -1,0 +1,9 @@
+<h1>Weather For Norway Oslo<br /></h1>
+<div class="[ card ]" *ngFor="let weather of weatherDetail">
+      Sky Conditions: {{ weather.weather_state_name }}<br />
+      Min Tempreture: {{ weather.min_temp }}<br />
+      Max Tempreture: {{ weather.max_temp }}<br />
+      Actual Tempreture: {{ weather.the_temp }}<br />
+      Date Created: {{ weather.created }}<br />
+      Humidity: {{ weather.humidity }}<br />
+</div>
