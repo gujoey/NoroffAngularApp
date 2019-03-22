@@ -19,8 +19,8 @@ export class LoginPageComponent implements OnInit {
 
 
   ngOnInit() {
-    localStorage.setItem('Username', 'Michael');
-    localStorage.setItem('Password', '@Michael123');
+    localStorage.setItem('Username', 'user');
+    localStorage.setItem('Password', '123');
     this.userObj = this.loginService.getLoginDetails();
   }
 
