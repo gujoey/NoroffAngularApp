@@ -6,15 +6,14 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class JobsService {
-  private url = 'https://jobs.github.com/positions.json';
+export class SpacexLaunchService {
+  private url = 'https://api.spacexdata.com/v3/launches/';
   private conversionUrl = 'https://cors-anywhere.herokuapp.com/';
 
 
-  constructor(private http: Http) {
-   }
+  constructor(private http: Http) { }
 
-  getJobs(): Observable<any[]> {
+  getLaunches(): Observable<any[]> {
     return this.http.get(this.conversionUrl + this.url).pipe(
       map(response => {
         return response.json();
