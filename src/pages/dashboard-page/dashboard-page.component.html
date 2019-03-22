@@ -1,9 +1,74 @@
-<h1>Weather For Norway Oslo<br /></h1>
-<div class="[ card ]" *ngFor="let weather of weatherDetail">
-      Sky Conditions: {{ weather.weather_state_name }}<br />
-      Min Tempreture: {{ weather.min_temp }}<br />
-      Max Tempreture: {{ weather.max_temp }}<br />
-      Actual Tempreture: {{ weather.the_temp }}<br />
-      Date Created: {{ weather.created }}<br />
-      Humidity: {{ weather.humidity }}<br />
+<div class="[ container ]">
+	<h1>Weather For Norway Oslo</h1>
+	<div class="[ row row-eq-height]">
+		<div class="[ col-md-4 pt-4 ]" *ngFor="let weather of weatherDetail">
+			<div class="[ col-inner ]">
+				<p>
+					<strong>Sky Conditions:</strong><br> {{ weather.weather_state_name }}<br /><br>
+					<strong>Min Tempreture:</strong><br> {{ weather.min_temp }}<br /><br>
+					<strong>Max Tempreture:</strong><br> {{ weather.max_temp }}<br /><br>
+					<strong>Actual Tempreture:</strong><br> {{ weather.the_temp }}<br /><br>
+					<strong>Date Created:</strong><br> {{ weather.created }}<br /><br>
+					<strong>Humidity:</strong><br> {{ weather.humidity }}<br /><br>
+				</p>
+			</div>
+		</div>
+	</div><br><br>
+	
+	<h1>Crypton Currencies</h1>
+	<div class="[ row row-eq-height ]">
+		<div class="[ col-md-4 pt-4 ]" *ngFor="let crypto of cryptoDetail">
+			<div class="[ col-inner ]">
+				<p>
+					<strong>Name:</strong><br> {{ crypto.name }}<br /><br>
+					<strong>Description:</strong><br> {{ crypto.description }}<br /><br>
+					<strong>Symbol:</strong><br> {{ crypto.symbol }}<br /><br>
+					<strong>Price:</strong><br> {{ crypto.price }}<br />
+				</p>
+			</div>
+		</div>
+	</div><br><br>
+	
+	<h1>Breweries</h1>
+	<div class="[ row row-eq-height ]">
+		<div class="[ col-md-4 pt-4 ]" *ngFor="let brewery of breweryDetail">
+			<div class="[ col-inner ]">
+				<p>
+					<strong>Name:</strong><br> {{ brewery.name }}<br /><br>
+					<strong>Type:</strong><br> {{ brewery.brewery_type }}<br /><br>
+					<strong>City:</strong><br> {{ brewery.city }}<br /><br>
+					<a href="{{ brewery.website_url }}">Website</a>
+				</p>
+			</div>
+		</div>
+	</div><br><br>
+	
+		<h1>Jobs</h1>
+	<div class="[ row row-eq-height ]"> 
+		<div class="[ col-md-4 pt-4 ]" *ngFor="let jobs of jobsDetail">
+			<div class="[ col-inner ]">
+				<img src="{{jobs.company_logo}}" class="[ img-fluid ]" alt="{{ jobs.company }} logo"><br>
+				<p>
+					<strong>Company:</strong><br> {{ jobs.company }}<br /><br>
+					<strong>Job description:</strong><br> {{ jobs.title }}<br /><br>
+					<strong>Location:</strong><br> {{ jobs.location }}<br /><br>
+					<a href="{{ jobs.company_url }}">Company website</a>
+				</p>
+			</div>
+		</div>
+	</div><br><br>
+	
+	<h1>SpaceX Launches</h1>
+	<div class="[ row row-eq-height ]"> 
+		<div class="[ col-md-4 pt-4 ]" *ngFor="let spacexLaunches of spacexLaunchDetail">
+			<div class="[ col-inner ]">
+				<p>
+					<strong>Location:</strong><br>{{ spacexLaunches.mission_name }} <br><br>
+					<strong>Launch year:</strong><br> {{ spacexLaunches.launch_year }}<br /><br>
+					<strong>Rocket name:</strong><br> {{ spacexLaunches.rocket.rocket_name }}<br /><br>
+					<strong>Detais:</strong><br> {{ spacexLaunches.details }}<br />
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
